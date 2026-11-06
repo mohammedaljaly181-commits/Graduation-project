@@ -1,0 +1,302 @@
+/* الإعدادات العامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+/* شريط التنقل */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 20px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ecf0f1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    background-color: #3498db;
+}
+
+/* زر تسجيل الخروج */
+nav ul li a[href="logout.html"] {
+    background-color: #c0392b;
+}
+
+nav ul li a[href="logout.html"]:hover {
+    background-color: #e74c3c;
+}
+
+/* محتوى الصفحات */
+main {
+    width: 95%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #555555;
+}
+
+/* الروابط */
+main a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* النماذج */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+}
+
+/* الأزرار */
+button, input[type="submit"] {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #219653;
+}
+
+/* صفحة المشاريع */
+main.projects-container {
+    width: 98%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+/* مربع البحث */
+.search-box {
+    margin: 15px 0;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 8px;
+}
+
+/* حاوية الجدول */
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* جدول المشاريع */
+.projects-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.projects-table th,
+.projects-table td {
+    padding: 7px 3px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.projects-table th {
+    background-color: #176B87;
+    color: white;
+}
+
+.projects-table tr:nth-child(even) {
+    background-color: #f2f7f9;
+}
+
+/* تذييل الصفحة */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* الشاشات المتوسطة */
+@media screen and (max-width: 768px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 6px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 7px 9px;
+    }
+
+    main {
+        width: 98%;
+        padding: 15px;
+    }
+
+    main.projects-container {
+        padding: 8px;
+    }
+
+    .projects-table th,
+    .projects-table td {
+        font-size: 10px;
+        padding: 5px 2px;
+    }
+}
+
+/* شاشات الموبايل */
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 15px 5px;
+    }
+
+    header h1 {
+        font-size: 17px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
+        padding: 6px 7px;
+    }
+
+    main {
+        width: 98%;
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    main.projects-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .projects-container h2 {
+        font-size: 19px;
+    }
+
+    .projects-table th,
+    .projects-table td {
+        font-size: 8px;
+        padding: 4px 2px;
+        line-height: 1.4;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* الشاشات الصغيرة جداً */
+@media screen and (max-width: 360px) {
+
+    .projects-table th,
+    .projects-table td {
+        font-size: 7px;
+        padding: 3px 1px;
+    }
+
+    header h1 {
+        font-size: 15px;
+    }
+
+}
