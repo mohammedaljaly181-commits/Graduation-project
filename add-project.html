@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة مشروع جديد</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+  <script src="script.js"></script>
+
+<body>
+
+<header>
+    <h1>نظام إدارة مشاريع التخرج</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">الرئيسية</a></li>
+            <li><a href="projects.html">المشاريع</a></li>
+            <li><a href="add-project.html">إضافة مشروع</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+            <li><a href="logout.html">تسجيل الخروج</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>تسجيل مشروع تخرج جديد</h2>
+
+    <form onsubmit="alert('تم إرسال مقترح المشروع بنجاح'); return false;">
+
+        <label>اسم المشروع:</label><br>
+        <input type="text" placeholder="أدخل اسم المشروع" required>
+
+        <br><br>
+
+        <label>وصف المشروع:</label><br>
+        <textarea rows="5" cols="40" required></textarea>
+
+        <br><br>
+
+        <label>أسماء أعضاء الفريق:</label><br>
+        <input type="text" placeholder="أسماء الطلاب" required>
+
+        <br><br>
+
+        <label>المشرف الأكاديمي:</label><br>
+        <select required>
+            <option value="">اختر المشرف</option>
+            <option>د. عز الدين</option>
+            <option>د. سناء البشير</option>
+            <option>د. الهادي</option>
+        </select>
+
+        <br><br>
+
+        <label>التقنيات المستخدمة:</label><br>
+        <input type="text" placeholder="HTML, CSS, JavaScript">
+
+        <br><br>
+
+        <label>ملف المشروع:</label><br>
+        <input type="file" accept=".pdf">
+
+        <br><br>
+
+        <button type="submit">إرسال المشروع</button>
+
+    </form>
+</main>
+
+<footer>
+    <p>جميع حقوق التطوير محفوظة &copy; 2026</p>
+</footer>
+
+</body>
+</html>
